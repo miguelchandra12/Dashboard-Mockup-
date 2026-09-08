@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<meta name="design_doc_mode" content="canvas">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0088b0"/><g fill="#fff"><rect x="60" y="60" width="80" height="12"/><rect x="60" y="84" width="80" height="12"/><rect x="60" y="108" width="52" height="12"/><rect x="60" y="132" width="66" height="12"/></g></svg></template>
+<link rel="stylesheet" href="_ds/broadsheet-419d5cdc-3eb1-4d13-9720-3005c915e02c/styles.css">
+<script src="_ds/broadsheet-419d5cdc-3eb1-4d13-9720-3005c915e02c/_ds_bundle.js"></script>
+<style>
+body{margin:0;background:#e8e6e2;font-family:"Source Serif 4",Georgia,serif}
+a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#201e1d;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 "Source Serif 4",Georgia,serif;color:#201e1d}
+.dv-opts{display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#201e1d;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11.5px/1.3 "Source Serif 4",Georgia,serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.10);overflow:hidden}
+.dv-opt:target .dv-oid{background:#0088b0;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 "Source Serif 4",Georgia,serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Brand Affinity — Tableau dashboard, 1440 px · <a href="Membership Penetration.dc.html">Membership Penetration</a> · <a href="Affordability Promo Effectiveness.dc.html">Affordability</a> · <a href="EDM Campaign Performance.dc.html">EDM Campaign</a></span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Faithful to the spec sketch — Sub LOB at row level, restrained palette</div>
+<div class="dv-card" style="width:1440px">
+
+  <div style="padding:26px 32px 0">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px">
+      <div>
+        
+        <h1 style="display:inline-block;margin:10px 0 6px;padding-bottom:7px;border-bottom:4px solid var(--color-accent-2-600);font:600 44px/1.06 var(--font-heading);letter-spacing:-.015em;color:var(--color-text)">Brand Affinity</h1>
+        
+      </div>
+      <img src="./pasted-1788876927300-0-mtsr4v2y-7y6p.png" alt="MAP TECH — Win more together" width="610" height="92" style="height:38px;width:auto;display:block;flex:none">
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:stretch;gap:14px;padding:20px 32px 18px">
+    <div style="display:flex;align-items:center;gap:7px;flex:none;padding-top:9px">
+      <span style="font:600 9.5px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-700)">Filters</span>
+      <span style="font:400 13px/1 var(--font-body);color:var(--color-accent-600)">▸</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <sc-for list="{{ filtersA }}" as="f" hint-placeholder-count="8">
+        <div style="position:relative">
+          <button onClick="{{ f.onClick }}" style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:118px;padding:8px 11px;background:var(--color-neutral-100);border:1px solid var(--color-neutral-300);border-radius:2px;cursor:pointer;text-align:left;font-family:var(--font-body)" style-hover="background:var(--color-accent-100);border-color:var(--color-accent-400)">
+            <span style="font:600 9px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600)">{{ f.label }}</span>
+            <span style="display:flex;align-items:center;gap:6px;font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ f.value }}<span style="font-size:8px;color:var(--color-neutral-600)">▾</span></span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;top:calc(100% + 4px);left:0;z-index:20;min-width:190px;padding:5px;background:#fff;border:1px solid var(--color-neutral-400);box-shadow:var(--shadow-lg)">
+              <sc-for list="{{ f.opts }}" as="o" hint-placeholder-count="4">
+                <button onClick="{{ o.onClick }}" style="display:block;width:100%;padding:7px 9px;background:transparent;border:none;cursor:pointer;text-align:left;font:400 12.5px/1.2 var(--font-body);color:var(--color-text)" style-hover="background:var(--color-accent-100)">{{ o.label }}</button>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:0;padding:0 32px;border-bottom:1px solid var(--color-neutral-300)">
+    <button onClick="{{ aMainClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">By MAP Universe</button>
+    <button onClick="{{ aDetailClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Brand Affinity Performance</button>
+  </div>
+  <div style="padding:0 32px;margin-top:-1px;position:relative;height:2px">
+    <div style="position:absolute;left:{{ aTabLeft }};width:{{ aTabWidth }};height:2px;background:var(--color-accent-600)"></div>
+  </div>
+
+  <sc-if value="{{ aMain }}" hint-placeholder-val="{{ true }}">
+  <div style="padding:22px 32px 34px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
+      <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Main table — by MAP Universe<span style="font:400 12.5px/1.2 var(--font-body);color:var(--color-neutral-600)"> &nbsp;snapshot 31 Jan 2026 · anchor brand Apple</span></div>
+      <button style="padding:7px 12px;background:#fff;border:1px solid var(--color-accent-600);border-radius:2px;cursor:pointer;font:600 11.5px/1 var(--font-body);color:var(--color-accent-700)" style-hover="background:var(--color-accent-100)">Download SKU performance details</button>
+    </div>
+    <table style="width:100%;border-collapse:collapse;border:1px solid var(--color-neutral-400)">
+      <thead>
+        <tr>
+          <th style="padding:7px 10px;background:#fff;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400)"></th>
+          <th colspan="2" style="padding:7px 10px;background:var(--color-neutral-200);border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.3 var(--font-body);color:var(--color-neutral-800)">Top 10 Sub LOBs sold<br><span style="font-weight:400">download SKU performance details</span></th>
+          <th colspan="5" style="padding:7px 10px;background:var(--color-accent-100);border-bottom:1px solid var(--color-neutral-400);font:600 11px/1 var(--font-body);letter-spacing:.09em;text-transform:uppercase;color:var(--color-accent-800)">(Apple) affinity</th>
+        </tr>
+        <tr>
+          <th style="width:196px;padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);border-right:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">MAP Universe</th>
+          <th style="width:126px;padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Top 10 Sub<br>LOB Sold</th>
+          <th style="width:74px;padding:9px 10px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Qty</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Share of<br>Membership</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Share of Transacted<br>Member (Brand)</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Average LTV<br><span style="font-weight:400;color:var(--color-neutral-600)">IDR</span></th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Average Brand LTV<br><span style="font-weight:400;color:var(--color-neutral-600)">IDR</span></th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Share of<br>Wallet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ uRows }}" as="u" hint-placeholder-count="18">
+          <tr style="background:{{ u.zebra }}">
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-right:1px solid var(--color-neutral-400);border-top:{{ u.topRule }}">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:20px">
+                <span style="font:600 13px/1.2 var(--font-body);color:var(--color-text)">{{ u.n }}</span>
+                <sc-if value="{{ u.first }}" hint-placeholder-val="{{ true }}">
+                  <button onClick="{{ u.onDetails }}" style="padding:4px 9px;background:var(--color-text);border:none;border-radius:2px;cursor:pointer;font:600 10px/1 var(--font-body);color:#fff" style-hover="background:var(--color-accent-700)">Details</button>
+                </sc-if>
+              </div>
+            </td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ u.lob }}</td>
+            <td style="padding:6px 10px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.qty }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.som }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.sotm }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.ltv }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.bltv }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.sow }}</td>
+          </tr>
+        </sc-for>
+        <tr>
+          <td style="padding:8px 10px;border-top:1.5px solid var(--color-text);border-right:1px solid var(--color-neutral-400);font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">Total</td>
+          <td style="padding:8px 10px;border-top:1.5px solid var(--color-text);font:400 11.5px/1.2 var(--font-body);color:var(--color-neutral-700)">All Sub LOBs</td>
+          <td style="padding:8px 10px;border-right:1px solid var(--color-neutral-400);border-top:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">11.077</td>
+          <td colspan="5" style="padding:8px 10px;border-top:1.5px solid var(--color-text);font:400 11.5px/1.2 var(--font-body);text-align:right;color:var(--color-neutral-700)">Members overlap between universes — shares and averages do not total</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ aDetail }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:22px 32px 34px">
+    <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:12px">
+      <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Detail page — Brand Affinity Performance</div>
+      <span style="padding:3px 9px;background:var(--color-accent-100);font:600 11px/1.3 var(--font-body);color:var(--color-accent-800)">Universe: {{ aUniverse }}</span>
+      <button onClick="{{ aMainClick }}" style="padding:3px 9px;background:transparent;border:1px solid var(--color-neutral-400);border-radius:2px;cursor:pointer;font:400 11px/1.3 var(--font-body);color:var(--color-neutral-700)" style-hover="border-color:var(--color-accent-600);color:var(--color-accent-700)">← back to universes</button>
+    </div>
+    <table style="width:100%;border-collapse:collapse;border:1px solid var(--color-neutral-400)">
+      <thead>
+        <tr>
+          <th style="width:196px;padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);border-right:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Brand Name</th>
+          <th style="width:126px;padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Top 10 Sub<br>LOB Sold</th>
+          <th style="width:74px;padding:9px 10px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Qty</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Share of<br>Membership</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Share of Transacted<br>Member (Brand)</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Average LTV</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Average Brand LTV</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Share of Wallet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ bRows }}" as="b" hint-placeholder-count="18">
+          <tr style="background:{{ b.zebra }}">
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-right:1px solid var(--color-neutral-400);border-top:{{ b.topRule }};font:600 13px/1.2 var(--font-body);color:var(--color-text)">{{ b.n }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ b.lob }}</td>
+            <td style="padding:6px 10px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.qty }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.som }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.sotm }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.ltv }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.bltv }}</td>
+            <td style="padding:6px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.sow }}</td>
+          </tr>
+        </sc-for>
+      </tbody>
+    </table>
+    
+  </div>
+  </sc-if>
+
+</div>
+</div>
+
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Best practice — scorecards and charts answer the question, the full table sits below</div>
+<div class="dv-card" style="width:1440px">
+
+  <div style="padding:26px 32px 0">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px">
+      <div>
+        
+        <h1 style="display:inline-block;margin:10px 0 6px;padding-bottom:7px;border-bottom:4px solid var(--color-accent-2-600);font:600 44px/1.06 var(--font-heading);letter-spacing:-.015em;color:var(--color-text)">Brand Affinity</h1>
+        
+      </div>
+      <img src="./pasted-1788876927300-0-mtsr4v2y-7y6p.png" alt="MAP TECH — Win more together" width="610" height="92" style="height:38px;width:auto;display:block;flex:none">
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:8px;padding:20px 32px 18px">
+    <sc-for list="{{ filtersB }}" as="f" hint-placeholder-count="8">
+      <div style="position:relative">
+        <button onClick="{{ f.onClick }}" style="display:flex;align-items:center;gap:7px;padding:8px 11px;background:#fff;border:1px solid var(--color-neutral-400);border-radius:2px;cursor:pointer;font-family:var(--font-body)" style-hover="border-color:var(--color-accent-600);background:var(--color-accent-100)">
+          <span style="font:400 12px/1 var(--font-body);color:var(--color-neutral-700)">{{ f.label }}</span>
+          <span style="font:600 12.5px/1 var(--font-body);color:var(--color-text)">{{ f.value }}</span>
+          <span style="font-size:8px;color:var(--color-neutral-600)">▾</span>
+        </button>
+        <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:calc(100% + 4px);left:0;z-index:20;min-width:190px;padding:5px;background:#fff;border:1px solid var(--color-neutral-400);box-shadow:var(--shadow-lg)">
+            <sc-for list="{{ f.opts }}" as="o" hint-placeholder-count="4">
+              <button onClick="{{ o.onClick }}" style="display:block;width:100%;padding:7px 9px;background:transparent;border:none;cursor:pointer;text-align:left;font:400 12.5px/1.2 var(--font-body);color:var(--color-text)" style-hover="background:var(--color-accent-100)">{{ o.label }}</button>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display:flex;gap:0;padding:0 32px;border-bottom:1px solid var(--color-neutral-300)">
+    <button onClick="{{ bMainClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Universe overview</button>
+    <button onClick="{{ bDetailClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Brand performance</button>
+  </div>
+  <div style="padding:0 32px;margin-top:-1px;position:relative;height:2px">
+    <div style="position:absolute;left:{{ bTabLeft }};width:{{ bTabWidth }};height:2px;background:var(--color-accent-600)"></div>
+  </div>
+
+  <sc-if value="{{ bMain }}" hint-placeholder-val="{{ true }}">
+  <div style="padding:24px 32px 34px">
+
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding-bottom:24px">
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Total members</div>
+        <div style="margin:8px 0 4px;font:600 34px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">2,84 M</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">+1,8% vs Dec 2025</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Apple buyers</div>
+        <div style="margin:8px 0 4px;font:600 34px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">412 K</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">14,5% of membership · <span style="color:var(--color-accent-700)">+0,6 pt</span></div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Avg share of wallet</div>
+        <div style="margin:8px 0 4px;font:600 34px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">48,6%</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">of an Apple buyer’s MAP spend</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Avg LTV, Apple buyers</div>
+        <div style="margin:8px 0 4px;font:600 34px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">18,2 jt</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">2,3× a non-Apple member</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;padding-bottom:30px">
+      <div>
+        <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Apple’s share of wallet, by universe</div>
+        <div style="margin:3px 0 16px;font:400 12px/1.3 var(--font-body);color:var(--color-neutral-600)">Share of each universe member’s lifetime MAP spend that goes to Apple</div>
+        <sc-for list="{{ universes }}" as="u" hint-placeholder-count="6">
+          <div style="display:flex;align-items:center;gap:12px;padding:5px 0">
+            <div style="width:78px;flex:none;font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ u.n }}</div>
+            <div style="flex:1;height:16px;background:var(--color-neutral-200)">
+              <div style="height:16px;width:{{ u.sowBar }};background:{{ u.sowColor }}"></div>
+            </div>
+            <div style="width:46px;flex:none;font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.sow }}</div>
+          </div>
+        </sc-for>
+        <div style="margin-top:12px;font:400 11.5px/1.4 var(--font-body);color:var(--color-neutral-700)">MAPTECH is the anchor’s own universe, shown in magenta — every other bar is the cross-shopping opportunity.</div>
+      </div>
+      <div>
+        <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">The wallet gap</div>
+        <div style="margin:3px 0 16px;font:400 12px/1.3 var(--font-body);color:var(--color-neutral-600)">Average total LTV against average Apple LTV, IDR million</div>
+        <sc-for list="{{ universes }}" as="u" hint-placeholder-count="6">
+          <div style="display:flex;align-items:center;gap:12px;padding:4px 0">
+            <div style="width:78px;flex:none;font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ u.n }}</div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:3px">
+              <div style="height:9px;width:{{ u.ltvBar }};background:var(--color-neutral-500)"></div>
+              <div style="height:9px;width:{{ u.bltvBar }};background:var(--color-accent-600)"></div>
+            </div>
+            <div style="width:76px;flex:none;font:400 11.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-neutral-700)">{{ u.ltvM }} / <span style="color:var(--color-accent-700);font-weight:600">{{ u.bltvM }}</span></div>
+          </div>
+        </sc-for>
+        <div style="margin-top:12px;display:flex;gap:18px;font:400 11.5px/1.4 var(--font-body);color:var(--color-neutral-700)">
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:9px;background:var(--color-neutral-500);display:inline-block"></span>Total MAP LTV</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:9px;background:var(--color-accent-600);display:inline-block"></span>Apple LTV</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+      <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Full detail — all universes, all metrics</div>
+      <button style="padding:7px 12px;background:#fff;border:1px solid var(--color-accent-600);border-radius:2px;cursor:pointer;font:600 11.5px/1 var(--font-body);color:var(--color-accent-700)" style-hover="background:var(--color-accent-100)">Download SKU performance details</button>
+    </div>
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr>
+          <th style="width:186px;padding:8px 10px 8px 0;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">MAP Universe</th>
+          <th style="width:126px;padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Top 10 Sub LOB Sold</th>
+          <th style="width:74px;padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Qty</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Share of<br>Membership</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Share of Transacted<br>Member (Apple)</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Average LTV</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Average<br>Apple LTV</th>
+          <th style="width:170px;padding:8px 0 8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Share of Wallet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ uRows }}" as="u" hint-placeholder-count="18">
+          <tr>
+            <td style="padding:7px 10px 7px 0;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }}">
+              <div style="display:flex;align-items:center;gap:8px;min-height:20px">
+                <span style="font:600 13px/1.2 var(--font-body);color:var(--color-text)">{{ u.n }}</span>
+                <sc-if value="{{ u.first }}" hint-placeholder-val="{{ true }}">
+                  <button onClick="{{ u.onDetailsB }}" style="padding:2px 7px;background:transparent;border:1px solid var(--color-neutral-400);border-radius:2px;cursor:pointer;font:400 10px/1.3 var(--font-body);color:var(--color-neutral-700)" style-hover="border-color:var(--color-accent-600);color:var(--color-accent-700)">Details</button>
+                </sc-if>
+              </div>
+            </td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ u.lob }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.qty }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.som }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.sotm }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.ltv }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.bltv }}</td>
+            <td style="padding:7px 0 7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ u.topRule }}">
+              <sc-if value="{{ u.first }}" hint-placeholder-val="{{ true }}">
+                <div style="display:flex;align-items:center;gap:9px">
+                  <div style="flex:1;height:11px;background:var(--color-neutral-200)"><div style="height:11px;width:{{ u.sowBar }};background:{{ u.sowColor }}"></div></div>
+                  <span style="width:42px;flex:none;font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ u.sow }}</span>
+                </div>
+              </sc-if>
+            </td>
+          </tr>
+        </sc-for>
+        <tr>
+          <td style="padding:9px 10px 9px 0;border-bottom:1.5px solid var(--color-text);border-top:1px solid var(--color-neutral-400);font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">Total</td>
+          <td style="padding:9px 10px;border-bottom:1.5px solid var(--color-text);border-top:1px solid var(--color-neutral-400);font:400 11.5px/1.2 var(--font-body);color:var(--color-neutral-700)">All Sub LOBs</td>
+          <td style="padding:9px 10px;border-bottom:1.5px solid var(--color-text);border-top:1px solid var(--color-neutral-400);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">11.077</td>
+          <td colspan="5" style="padding:9px 0 9px 10px;border-bottom:1.5px solid var(--color-text);border-top:1px solid var(--color-neutral-400);font:400 11.5px/1.2 var(--font-body);text-align:right;color:var(--color-neutral-700)">Members overlap between universes — shares and averages do not total</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ bDetail }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:24px 32px 34px">
+    <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:18px">
+      <div style="font:600 17px/1.2 var(--font-heading);color:var(--color-text)">Brands inside {{ bUniverse }}, ranked by Apple wallet share</div>
+      <span style="padding:3px 9px;background:var(--color-accent-100);font:600 11px/1.3 var(--font-body);color:var(--color-accent-800)">Universe: {{ bUniverse }}</span>
+      <button onClick="{{ bMainClick }}" style="padding:3px 9px;background:transparent;border:1px solid var(--color-neutral-400);border-radius:2px;cursor:pointer;font:400 11px/1.3 var(--font-body);color:var(--color-neutral-700)" style-hover="border-color:var(--color-accent-600);color:var(--color-accent-700)">← back to universes</button>
+    </div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;padding-bottom:28px">
+      <div>
+        <div style="font:600 14px/1.2 var(--font-heading);color:var(--color-text)">Share of wallet, by brand</div>
+        <div style="margin:3px 0 14px;font:400 12px/1.3 var(--font-body);color:var(--color-neutral-600)">Apple’s cut of the lifetime spend of members who buy this brand</div>
+        <sc-for list="{{ brands }}" as="b" hint-placeholder-count="6">
+          <div style="display:flex;align-items:center;gap:12px;padding:5px 0">
+            <div style="width:112px;flex:none;font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ b.n }}</div>
+            <div style="flex:1;height:16px;background:var(--color-neutral-200)"><div style="height:16px;width:{{ b.sowBar }};background:var(--color-accent-600)"></div></div>
+            <div style="width:46px;flex:none;font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.sow }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div>
+        <div style="font:600 14px/1.2 var(--font-heading);color:var(--color-text)">Top 10 Sub LOBs sold across all brands</div>
+        <div style="margin:3px 0 14px;font:400 12px/1.3 var(--font-body);color:var(--color-neutral-600)">Units bought by {{ bUniverse }} members, all brands pooled — Jan 2026</div>
+        <sc-for list="{{ topLobs }}" as="l" hint-placeholder-count="10">
+          <div style="display:flex;align-items:center;gap:12px;padding:3px 0">
+            <div style="width:118px;flex:none;font:400 12px/1.2 var(--font-body);color:var(--color-text)">{{ l.n }}</div>
+            <div style="flex:1;height:13px;background:var(--color-neutral-200)"><div style="height:13px;width:{{ l.bar }};background:var(--color-accent-600)"></div></div>
+            <div style="width:44px;flex:none;font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ l.v }}</div>
+          </div>
+        </sc-for>
+        <div style="margin-top:12px;font:400 11.5px/1.45 var(--font-body);color:var(--color-neutral-700)">The three iPhone generations are 99% of units; everything below iPad A16 is a long tail worth excluding from campaign targeting.</div>
+      </div>
+    </div>
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr>
+          <th style="width:186px;padding:8px 10px 8px 0;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Brand Name</th>
+          <th style="width:126px;padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Top 10 Sub LOB Sold</th>
+          <th style="width:74px;padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Qty</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Share of<br>Membership</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Share of Transacted<br>Member (Apple)</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Average LTV</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Average Apple LTV</th>
+          <th style="width:170px;padding:8px 0 8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Share of Wallet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ bRows }}" as="b" hint-placeholder-count="18">
+          <tr>
+            <td style="padding:7px 10px 7px 0;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:600 13px/1.2 var(--font-body);color:var(--color-text)">{{ b.n }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ b.lob }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.qty }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.som }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.sotm }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.ltv }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.bltv }}</td>
+            <td style="padding:7px 0 7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ b.topRule }}">
+              <sc-if value="{{ b.first }}" hint-placeholder-val="{{ true }}">
+                <div style="display:flex;align-items:center;gap:9px">
+                  <div style="flex:1;height:11px;background:var(--color-neutral-200)"><div style="height:11px;width:{{ b.sowBar }};background:var(--color-accent-600)"></div></div>
+                  <span style="width:42px;flex:none;font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ b.sow }}</span>
+                </div>
+              </sc-if>
+            </td>
+          </tr>
+        </sc-for>
+      </tbody>
+    </table>
+    <div style="margin-top:14px;display:flex;align-items:center;gap:10px">
+      
+      
+    </div>
+  </div>
+  </sc-if>
+
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: “in <a class="dv-oid" href="#1b">1b</a> add a trend line for share of wallet” · “make <a class="dv-oid" href="#1a">1a</a> collapse the Sub LOB rows by default” · “new directions”</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const LOBS = ['iPhone 16','iPhone 15','iPhone 14'];
+const UNIVERSES = [
+  {n:'MAPTECH',som:'38,2%',sotm:'61,4%',ltv:'18.240.000',bltv:'11.960.000',sow:'65,6%',sowN:65.6,ltvN:18.24,bltvN:11.96,q:[3284,2460,1339],anchor:true},
+  {n:'Fashion',som:'24,6%',sotm:'18,9%',ltv:'9.480.000',bltv:'3.120.000',sow:'32,9%',sowN:32.9,ltvN:9.48,bltvN:3.12,q:[812,590,333]},
+  {n:'Active',som:'15,1%',sotm:'12,4%',ltv:'7.860.000',bltv:'2.410.000',sow:'30,7%',sowN:30.7,ltvN:7.86,bltvN:2.41,q:[470,341,195]},
+  {n:'F&B',som:'11,3%',sotm:'8,6%',ltv:'6.240.000',bltv:'1.680.000',sow:'26,9%',sowN:26.9,ltvN:6.24,bltvN:1.68,q:[298,217,124]},
+  {n:'Retail',som:'8,4%',sotm:'6,1%',ltv:'5.410.000',bltv:'1.240.000',sow:'22,9%',sowN:22.9,ltvN:5.41,bltvN:1.24,q:[190,138,80]},
+  {n:'Kids',som:'4,7%',sotm:'3,2%',ltv:'4.980.000',bltv:'980.000',sow:'19,7%',sowN:19.7,ltvN:4.98,bltvN:0.98,q:[96,70,40]}
+];
+const BRANDS = [
+  {n:'Massimo Dutti',som:'3,2%',sotm:'24,8%',ltv:'14.680.000',bltv:'5.410.000',sow:'36,9%',sowN:36.9,q:[120,88,51]},
+  {n:'Zara',som:'9,4%',sotm:'21,6%',ltv:'11.240.000',bltv:'3.860.000',sow:'34,3%',sowN:34.3,q:[238,175,100]},
+  {n:'Stradivarius',som:'5,1%',sotm:'16,2%',ltv:'8.120.000',bltv:'2.240.000',sow:'27,6%',sowN:27.6,q:[120,88,51]},
+  {n:'Lacoste',som:'2,3%',sotm:'18,1%',ltv:'12.480.000',bltv:'3.240.000',sow:'26,0%',sowN:26.0,q:[91,67,38]},
+  {n:'Pull&Bear',som:'4,6%',sotm:'12,4%',ltv:'6.940.000',bltv:'1.620.000',sow:'23,3%',sowN:23.3,q:[98,71,41]},
+  {n:'Marks & Spencer',som:'1,9%',sotm:'9,8%',ltv:'7.310.000',bltv:'1.180.000',sow:'16,1%',sowN:16.1,q:[48,35,21]}
+];
+const TOP_LOBS = [
+  ['iPhone 16',715],['iPhone 15',524],['iPhone 14',302],['iPad A16',188],['MacBook Air Neo',142],
+  ['Watch SE 3',118],['AirPods Pro 3',96],['iPad Pro M5',74],['iPhone 16 Pro',61],['Mac Neo Studio',42]
+];
+const FILTERS = [
+  {id:'date',label:'Date',value:'Month · Jan 2026',opts:['Day','Week','Month','Year','Customize']},
+  {id:'cmp',label:'Comparison by period',value:'vs. Dec 2025',opts:['Off','vs. previous period','vs. Dec 2025','vs. same period last year']},
+  {id:'concept',label:'Concept store',value:'All (3)',opts:['All (3)','Digimap','Digiplus','Sharkninja']},
+  {id:'store',label:'Store name',value:'All stores',opts:['All stores','Digimap Grand Indonesia','Digimap PIM 3','Digiplus Central Park']},
+  {id:'brand',label:'Brand',value:'Apple',opts:['Apple','Samsung','Xiaomi','Huawei']},
+  {id:'mask',label:'Campaign masking',value:'DF, Mapclub',opts:['DF','Mapclub','DF, Mapclub']},
+  {id:'ctype',label:'Campaign type',value:'All (4)',opts:['All (4)','Switcher','Upgrader','Seasonal','LCM']},
+  {id:'cid',label:'Campaign ID',value:'2 selected',opts:['Switcher_DF_Jan','Upgrader_Mapclub_Jan','Payday_Mapclub_Jan']}
+];
+const TABW = [{l:'32px',w:'148px'},{l:'180px',w:'214px'}];
+const TABWB = [{l:'32px',w:'150px'},{l:'182px',w:'156px'}];
+const n = v => v.toLocaleString('de-DE');
+
+class Component extends DCLogic {
+  state = { tabA:0, tabB:0, open:null, sel:{}, uniA:'Fashion', uniB:'Fashion' };
+  bar(v,max){ return (v/max*100).toFixed(1)+'%'; }
+  filters(card){
+    return FILTERS.map(f => {
+      const key = card+'-'+f.id;
+      return {
+        label:f.label,
+        value:this.state.sel[key] || f.value,
+        open:this.state.open === key,
+        onClick:() => this.setState(s => ({open: s.open === key ? null : key})),
+        opts:f.opts.map(o => ({label:o, onClick:() => this.setState({sel:{...this.state.sel,[key]:o}, open:null})}))
+      };
+    });
+  }
+  expand(list, extra){
+    const out = [];
+    list.forEach(item => {
+      LOBS.forEach((lob,i) => {
+        out.push({
+          n: i === 0 ? item.n : '',
+          lob, qty: n(item.q[i]),
+          som: i === 0 ? item.som : '',
+          sotm: i === 0 ? item.sotm : '',
+          ltv: i === 0 ? item.ltv : '',
+          bltv: i === 0 ? item.bltv : '',
+          sow: i === 0 ? item.sow : '',
+          first: i === 0,
+          topRule: i === 0 ? '1px solid var(--color-neutral-400)' : '1px solid transparent',
+          zebra: i === 0 ? '#fff' : 'var(--color-neutral-100)',
+          ...extra(item)
+        });
+      });
+    });
+    return out;
+  }
+  renderVals(){
+    const universes = UNIVERSES.map(u => ({...u,
+      sowBar: this.bar(u.sowN,70),
+      sowColor: u.anchor ? 'var(--color-accent-2-600)' : 'var(--color-accent-600)',
+      ltvBar: this.bar(u.ltvN,20), bltvBar: this.bar(u.bltvN,20),
+      ltvM: u.ltvN.toFixed(1).replace('.',','), bltvM: u.bltvN.toFixed(1).replace('.',',')
+    }));
+    const brands = BRANDS.map(b => ({...b, sowBar: this.bar(b.sowN,40)}));
+    const uRows = this.expand(UNIVERSES, u => ({
+      sowBar: this.bar(u.sowN,70),
+      sowColor: u.anchor ? 'var(--color-accent-2-600)' : 'var(--color-accent-600)',
+      onDetails: () => this.setState({tabA:1, uniA:u.n}),
+      onDetailsB: () => this.setState({tabB:1, uniB:u.n})
+    }));
+    const bRows = this.expand(BRANDS, b => ({ sowBar: this.bar(b.sowN,40) }));
+    const topLobs = TOP_LOBS.map(([nm,v]) => ({n:nm, v:n(v), bar:this.bar(v,715)}));
+    return {
+      universes, brands, uRows, bRows, topLobs,
+      aUniverse: this.state.uniA, bUniverse: this.state.uniB,
+      filtersA: this.filters('a'), filtersB: this.filters('b'),
+      aMain: this.state.tabA === 0, aDetail: this.state.tabA === 1,
+      bMain: this.state.tabB === 0, bDetail: this.state.tabB === 1,
+      aMainClick: () => this.setState({tabA:0}), aDetailClick: () => this.setState({tabA:1}),
+      bMainClick: () => this.setState({tabB:0}), bDetailClick: () => this.setState({tabB:1}),
+      aTabLeft: TABW[this.state.tabA].l, aTabWidth: TABW[this.state.tabA].w,
+      bTabLeft: TABWB[this.state.tabB].l, bTabWidth: TABWB[this.state.tabB].w
+    };
+  }
+}
+</script>
+</body>
+</html>

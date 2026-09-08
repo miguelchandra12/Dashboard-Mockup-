@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<meta name="design_doc_mode" content="canvas">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0088b0"/><g fill="#fff"><rect x="60" y="60" width="80" height="12"/><rect x="60" y="84" width="80" height="12"/><rect x="60" y="108" width="52" height="12"/><rect x="60" y="132" width="66" height="12"/></g></svg></template>
+<link rel="stylesheet" href="_ds/broadsheet-419d5cdc-3eb1-4d13-9720-3005c915e02c/styles.css">
+<script src="_ds/broadsheet-419d5cdc-3eb1-4d13-9720-3005c915e02c/_ds_bundle.js"></script>
+<style>
+body{margin:0;background:#e8e6e2;font-family:"Source Serif 4",Georgia,serif}
+a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#201e1d;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 "Source Serif 4",Georgia,serif;color:#201e1d}
+.dv-opts{display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#201e1d;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11.5px/1.3 "Source Serif 4",Georgia,serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.10);overflow:hidden}
+.dv-opt:target .dv-oid{background:#0088b0;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 "Source Serif 4",Georgia,serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t4">
+<div class="dv-thd"><a class="dv-tid" href="#t4">4</a><span class="dv-tname">EDM Campaign Performance — Tableau dashboard, 1920 px (23 columns) · <a href="Brand Affinity.dc.html">Brand Affinity</a> · <a href="Membership Penetration.dc.html">Membership Penetration</a> · <a href="Affordability Promo Effectiveness.dc.html">Affordability</a></span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="4a">
+<div class="dv-olabel"><a class="dv-oid" href="#4a">4a</a>Faithful to the spec sketch — all 23 columns, both bands, definitions panel</div>
+<div class="dv-card" style="width:1920px">
+
+  <div style="padding:26px 32px 0">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px">
+      <div>
+        
+        <h1 style="display:inline-block;margin:10px 0 6px;padding-bottom:7px;border-bottom:4px solid var(--color-accent-2-600);font:600 44px/1.06 var(--font-heading);letter-spacing:-.015em;color:var(--color-text)">EDM Campaign Performance</h1>
+        
+      </div>
+      <img src="./pasted-1788876927300-0-mtsr4v2y-7y6p.png" alt="MAP TECH — Win more together" width="610" height="92" style="height:38px;width:auto;display:block;flex:none">
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:flex-start;gap:20px;padding:20px 32px 18px">
+    <div style="display:flex;align-items:center;gap:7px;flex:none;padding-top:9px">
+      <span style="font:600 9.5px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-700)">Filters</span>
+      <span style="font:400 13px/1 var(--font-body);color:var(--color-accent-600)">▸</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;flex:1">
+      <sc-for list="{{ filtersA }}" as="f" hint-placeholder-count="8">
+        <div style="position:relative">
+          <button onClick="{{ f.onClick }}" style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:118px;padding:8px 11px;background:var(--color-neutral-100);border:1px solid var(--color-neutral-300);border-radius:2px;cursor:pointer;text-align:left;font-family:var(--font-body)" style-hover="background:var(--color-accent-100);border-color:var(--color-accent-400)">
+            <span style="font:600 9px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600)">{{ f.label }}</span>
+            <span style="display:flex;align-items:center;gap:6px;font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ f.value }}<span style="font-size:8px;color:var(--color-neutral-600)">▾</span></span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;top:calc(100% + 4px);left:0;z-index:20;min-width:190px;padding:5px;background:#fff;border:1px solid var(--color-neutral-400);box-shadow:var(--shadow-lg)">
+              <sc-for list="{{ f.opts }}" as="o" hint-placeholder-count="4">
+                <button onClick="{{ o.onClick }}" style="display:block;width:100%;padding:7px 9px;background:transparent;border:none;cursor:pointer;text-align:left;font:400 12.5px/1.2 var(--font-body);color:var(--color-text)" style-hover="background:var(--color-accent-100)">{{ o.label }}</button>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+    
+  </div>
+
+  <div style="display:flex;gap:0;padding:0 32px;border-bottom:1px solid var(--color-neutral-300)">
+    <button onClick="{{ aMainClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Campaign × Sub LOB</button>
+    <button onClick="{{ aDetailClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Channel &amp; acquisition detail</button>
+  </div>
+  <div style="padding:0 32px;margin-top:-1px;position:relative;height:2px">
+    <div style="position:absolute;left:{{ aTabLeft }};width:{{ aTabWidth }};height:2px;background:var(--color-accent-600)"></div>
+  </div>
+
+  <sc-if value="{{ aMain }}" hint-placeholder-val="{{ true }}">
+  <div style="padding:22px 32px 34px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
+      <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Campaign performance</div>
+      <button style="padding:7px 12px;background:#fff;border:1px solid var(--color-accent-600);border-radius:2px;cursor:pointer;font:600 11.5px/1 var(--font-body);color:var(--color-accent-700)" style-hover="background:var(--color-accent-100)">Download SKU performance details</button>
+    </div>
+    <table style="width:100%;border-collapse:collapse;border:1px solid var(--color-neutral-400)">
+      <thead>
+        <tr>
+          <th colspan="3" style="padding:7px 8px;background:#fff;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400)"></th>
+          <th colspan="2" style="padding:7px 8px;background:var(--color-neutral-200);border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400);font:600 10px/1.3 var(--font-body);color:var(--color-neutral-800)">Top 5 Sub LOB sold<br><span style="font-weight:400">download SKU details</span></th>
+          <th colspan="10" style="padding:7px 8px;background:var(--color-accent-100);border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400);font:600 11px/1 var(--font-body);letter-spacing:.09em;text-transform:uppercase;color:var(--color-accent-800)">Engagement &amp; sales performance</th>
+          <th colspan="8" style="padding:7px 8px;background:var(--color-accent-2-100);border-bottom:1px solid var(--color-neutral-400);font:600 11px/1 var(--font-body);letter-spacing:.09em;text-transform:uppercase;color:var(--color-accent-2-800)">Acquisition / retention</th>
+        </tr>
+        <tr>
+          <th style="width:118px;padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Campaign ID</th>
+          <th style="width:78px;padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Sent Date</th>
+          <th style="width:78px;padding:8px 8px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Campaign<br>End Date</th>
+          <th style="width:66px;padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Top 5<br>Sub LOB</th>
+          <th style="padding:8px 8px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Qty<br>Sold</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Sent</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Delivered</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Open<br>Rate</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">CTR</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">CR</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Cost</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Online<br>Revenue</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">ROAS</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Total Revenue<br><span style="font-weight:400;color:var(--color-neutral-600)">offline + online</span></th>
+          <th style="padding:8px 8px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">AOV</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Total<br>Transactions</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Attachment<br>Rate</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">#MAPCLUB<br>Member</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">SBU New<br>Customer</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">SBU Existing<br>Customer</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Offline<br>Transaction</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">DF<br>transactions</th>
+          <th style="padding:8px 8px;border-bottom:1px solid var(--color-neutral-400);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">MAPCLUB<br>transaction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="9">
+          <tr style="background:{{ r.zebra }}">
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:600 11.5px/1.25 var(--font-body);color:var(--color-text)">{{ r.campaign }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 11px/1.25 var(--font-body);color:var(--color-neutral-700)">{{ r.sentDate }}</td>
+            <td style="padding:6px 8px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 11px/1.25 var(--font-body);color:var(--color-neutral-700)">{{ r.endDate }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);color:var(--color-text)">{{ r.lob }}</td>
+            <td style="padding:6px 8px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.qty }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.sent }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.delivered }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.open }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.ctr }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.cr }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.cost }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.online }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.roas }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.totalRev }}</td>
+            <td style="padding:6px 8px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.aov }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.txn }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.attach }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.mapclub }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.newCust }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.existCust }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.offline }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.df }}</td>
+            <td style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.mapTxn }}</td>
+          </tr>
+        </sc-for>
+        <tr>
+          <td colspan="4" style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);color:var(--color-text)">Total — 3 campaigns</td>
+          <td style="padding:8px 8px;border-right:1px solid var(--color-neutral-400);border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">10.457</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">7.063.200</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">6.843.000</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">51,3%</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3,3%</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">2,7%</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3.730</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">22.960</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">13,6</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">50.630</td>
+          <td style="padding:8px 8px;border-right:1px solid var(--color-neutral-400);border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">14,2</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3.563</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">2,9</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">2.407</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">731</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">2.832</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.935</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.030</td>
+          <td style="padding:8px 8px;border-top:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.664</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ aDetail }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:22px 32px 34px">
+    <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text);margin-bottom:12px">Channel &amp; acquisition detail</div>
+    <table style="width:1180px;border-collapse:collapse;border:1px solid var(--color-neutral-400)">
+      <thead>
+        <tr>
+          <th style="width:200px;padding:9px 10px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Campaign ID</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Total<br>Transactions</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">#MAPCLUB<br>Member</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">SBU New<br>Customer</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">SBU Existing<br>Customer</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Offline<br>Transaction</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">DF<br>transactions</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">MAPCLUB<br>transaction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ campaigns }}" as="c" hint-placeholder-count="3">
+          <tr style="background:{{ c.zebra }}">
+            <td style="padding:8px 10px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-200);font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ c.n }}</td>
+            <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.txn }}</td>
+            <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.mapclub }}</td>
+            <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.newCust }}</td>
+            <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.existCust }}</td>
+            <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.offline }}</td>
+            <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.df }}</td>
+            <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.mapTxn }}</td>
+          </tr>
+        </sc-for>
+      </tbody>
+    </table>
+  </div>
+  </sc-if>
+
+</div>
+</div>
+
+<div class="dv-opt" id="4b">
+<div class="dv-olabel"><a class="dv-oid" href="#4b">4b</a>Best practice — funnel and ROAS first, the 23-column table kept below</div>
+<div class="dv-card" style="width:1920px">
+
+  <div style="padding:26px 32px 0">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px">
+      <div>
+        
+        <h1 style="display:inline-block;margin:10px 0 6px;padding-bottom:7px;border-bottom:4px solid var(--color-accent-2-600);font:600 44px/1.06 var(--font-heading);letter-spacing:-.015em;color:var(--color-text)">EDM Campaign Performance</h1>
+        
+      </div>
+      <img src="./pasted-1788876927300-0-mtsr4v2y-7y6p.png" alt="MAP TECH — Win more together" width="610" height="92" style="height:38px;width:auto;display:block;flex:none">
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:8px;padding:20px 32px 18px">
+    <sc-for list="{{ filtersB }}" as="f" hint-placeholder-count="8">
+      <div style="position:relative">
+        <button onClick="{{ f.onClick }}" style="display:flex;align-items:center;gap:7px;padding:8px 11px;background:#fff;border:1px solid var(--color-neutral-400);border-radius:2px;cursor:pointer;font-family:var(--font-body)" style-hover="border-color:var(--color-accent-600);background:var(--color-accent-100)">
+          <span style="font:400 12px/1 var(--font-body);color:var(--color-neutral-700)">{{ f.label }}</span>
+          <span style="font:600 12.5px/1 var(--font-body);color:var(--color-text)">{{ f.value }}</span>
+          <span style="font-size:8px;color:var(--color-neutral-600)">▾</span>
+        </button>
+        <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:calc(100% + 4px);left:0;z-index:20;min-width:190px;padding:5px;background:#fff;border:1px solid var(--color-neutral-400);box-shadow:var(--shadow-lg)">
+            <sc-for list="{{ f.opts }}" as="o" hint-placeholder-count="4">
+              <button onClick="{{ o.onClick }}" style="display:block;width:100%;padding:7px 9px;background:transparent;border:none;cursor:pointer;text-align:left;font:400 12.5px/1.2 var(--font-body);color:var(--color-text)" style-hover="background:var(--color-accent-100)">{{ o.label }}</button>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display:flex;gap:0;padding:0 32px;border-bottom:1px solid var(--color-neutral-300)">
+    <button onClick="{{ bMainClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Performance overview</button>
+    <button onClick="{{ bDetailClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Acquisition &amp; channel</button>
+  </div>
+  <div style="padding:0 32px;margin-top:-1px;position:relative;height:2px">
+    <div style="position:absolute;left:{{ bTabLeft }};width:{{ bTabWidth }};height:2px;background:var(--color-accent-600)"></div>
+  </div>
+
+  <sc-if value="{{ bMain }}" hint-placeholder-val="{{ true }}">
+  <div style="padding:24px 32px 34px">
+
+    <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:30px;padding-bottom:26px">
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Emails sent</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">7,06 M</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">96,9% delivered</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Open rate</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">51,3%</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">+4,1 pt vs Dec 2025</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Transactions</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">3.563</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">54,3% offline</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Total revenue</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">50,6 mrd</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">45,4% online</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">ROAS</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">13,6×</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">3.730 jt spent</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">New customers</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">731</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">20,5% of transactions</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr);gap:48px;padding-bottom:30px">
+      <div>
+        <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Where the funnel leaks</div>
+        <div style="margin:3px 0 16px;font:400 12px/1.3 var(--font-body);color:var(--color-neutral-600)">Bar width is conversion from the stage above — absolute counts on the right</div>
+        <sc-for list="{{ funnel }}" as="s" hint-placeholder-count="5">
+          <div style="padding:6px 0">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px">
+              <span style="font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ s.n }}</span>
+              <span style="font:400 11.5px/1.2 var(--font-body);font-variant-numeric:tabular-nums;color:var(--color-neutral-700)">{{ s.v }} · <span style="font-weight:600;color:var(--color-text)">{{ s.step }}</span></span>
+            </div>
+            <div style="height:18px;background:var(--color-neutral-200)"><div style="height:18px;width:{{ s.bar }};background:{{ s.color }}"></div></div>
+          </div>
+        </sc-for>
+        
+      </div>
+      <div>
+        <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Return on ad spend, by campaign</div>
+        <div style="margin:3px 0 16px;font:400 12px/1.3 var(--font-body);color:var(--color-neutral-600)">Total revenue over cost</div>
+        <sc-for list="{{ campaigns }}" as="c" hint-placeholder-count="3">
+          <div style="padding:8px 0">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px">
+              <span style="font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ c.n }}</span>
+              <span style="font:600 13px/1.2 var(--font-body);font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.roas }}×</span>
+            </div>
+            <div style="height:18px;background:var(--color-neutral-200)"><div style="height:18px;width:{{ c.roasBar }};background:var(--color-accent-600)"></div></div>
+            <div style="margin-top:4px;font:400 11px/1.3 var(--font-body);font-variant-numeric:tabular-nums;color:var(--color-neutral-600)">{{ c.rev }} jt revenue on {{ c.cost }} jt cost</div>
+          </div>
+        </sc-for>
+        <div style="margin-top:10px;font:400 11.5px/1.45 var(--font-body);color:var(--color-neutral-700)">Payday leads on return and on volume — it also ran half the month.</div>
+      </div>
+      <div>
+        <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Revenue by channel</div>
+        <div style="margin:3px 0 16px;font:400 12px/1.3 var(--font-body);color:var(--color-neutral-600)">Offline still carries more than half of attributed revenue</div>
+        <sc-for list="{{ campaigns }}" as="c" hint-placeholder-count="3">
+          <div style="padding:8px 0">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px">
+              <span style="font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ c.n }}</span>
+              <span style="font:400 11.5px/1.2 var(--font-body);font-variant-numeric:tabular-nums;color:var(--color-neutral-700)">{{ c.rev }} jt</span>
+            </div>
+            <div style="display:flex;height:18px;width:{{ c.revBar }}">
+              <div style="width:{{ c.onlineW }};background:var(--color-accent-600)"></div>
+              <div style="width:{{ c.offlineW }};background:var(--color-accent-2-600)"></div>
+            </div>
+          </div>
+        </sc-for>
+        <div style="margin-top:12px;display:flex;gap:18px;font:400 11.5px/1.4 var(--font-body);color:var(--color-neutral-700)">
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:10px;background:var(--color-accent-600);display:inline-block"></span>Online</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:10px;background:var(--color-accent-2-600);display:inline-block"></span>Offline</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+      <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Full detail — campaign × Sub LOB, all 23 measures</div>
+      <button style="padding:7px 12px;background:#fff;border:1px solid var(--color-accent-600);border-radius:2px;cursor:pointer;font:600 11.5px/1 var(--font-body);color:var(--color-accent-700)" style-hover="background:var(--color-accent-100)">Download SKU performance details</button>
+    </div>
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr>
+          <th colspan="5" style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-300);font:600 10px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--color-neutral-700)">Campaign</th>
+          <th colspan="10" style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-300);font:600 10px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--color-accent-700)">Engagement &amp; sales performance</th>
+          <th colspan="8" style="padding:6px 8px;border-bottom:1px solid var(--color-neutral-300);font:600 10px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;text-align:left;color:var(--color-accent-2-700)">Acquisition / retention</th>
+        </tr>
+        <tr>
+          <th style="width:118px;padding:8px 8px 8px 0;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Campaign ID</th>
+          <th style="width:78px;padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Sent Date</th>
+          <th style="width:78px;padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">End Date</th>
+          <th style="width:66px;padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Sub LOB</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Qty Sold</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Sent</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Delivered</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Open Rate</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">CTR</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">CR</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Cost</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Online Rev</th>
+          <th style="width:120px;padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">ROAS</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Total Revenue</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">AOV</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Total Txns</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Attachment<br>Rate</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">#MAPCLUB<br>Member</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">SBU New<br>Customer</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">SBU Existing<br>Customer</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Offline<br>Transaction</th>
+          <th style="padding:8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">DF<br>transactions</th>
+          <th style="padding:8px 0 8px 8px;border-bottom:1.5px solid var(--color-text);font:600 10.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">MAPCLUB<br>transaction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="9">
+          <tr>
+            <td style="padding:7px 8px 7px 0;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:600 11.5px/1.25 var(--font-body);color:var(--color-text)">{{ r.campaign }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 11px/1.25 var(--font-body);color:var(--color-neutral-700)">{{ r.sentDate }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 11px/1.25 var(--font-body);color:var(--color-neutral-700)">{{ r.endDate }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);color:var(--color-text)">{{ r.lob }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.qty }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.sent }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.delivered }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.open }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.ctr }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.cr }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.cost }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.online }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }}">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="flex:1;height:10px;background:var(--color-neutral-200)"><div style="height:10px;width:{{ r.roasBar }};background:var(--color-accent-600)"></div></div>
+                <span style="width:32px;flex:none;font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.roas }}</span>
+              </div>
+            </td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.totalRev }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.aov }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.txn }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.attach }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.mapclub }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.newCust }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.existCust }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.offline }}</td>
+            <td style="padding:7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.df }}</td>
+            <td style="padding:7px 0 7px 8px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.mapTxn }}</td>
+          </tr>
+        </sc-for>
+        <tr>
+          <td colspan="4" style="padding:9px 8px 9px 0;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);color:var(--color-text)">Total — 3 campaigns</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">10.457</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">7.063.200</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">6.843.000</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">51,3%</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3,3%</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">2,7%</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3.730</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">22.960</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:left;font-variant-numeric:tabular-nums;color:var(--color-text)">13,6</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">50.630</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">14,2</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3.563</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">2,9</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">2.407</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">731</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">2.832</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.935</td>
+          <td style="padding:9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.030</td>
+          <td style="padding:9px 0 9px 8px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.664</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="display:flex;gap:40px;margin-top:16px">
+      
+      <div style="width:520px;flex:none">
+        
+        <ol style="margin:0;padding-left:16px;font:400 11px/1.5 var(--font-body);color:var(--color-neutral-800)">
+          
+          
+          
+          
+        </ol>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ bDetail }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:24px 32px 34px">
+    <div style="font:600 17px/1.2 var(--font-heading);color:var(--color-text)">Acquisition and channel, by campaign</div>
+    <div style="margin:3px 0 22px;font:400 12px/1.3 var(--font-body);color:var(--color-neutral-600)">New against existing SBU customers, and where the transaction landed</div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;max-width:1500px">
+      <div>
+        <div style="font:600 14px/1.2 var(--font-heading);color:var(--color-text);margin-bottom:14px">New against existing customers</div>
+        <sc-for list="{{ campaigns }}" as="c" hint-placeholder-count="3">
+          <div style="padding:9px 0">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px">
+              <span style="font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ c.n }}</span>
+              <span style="font:400 11.5px/1.2 var(--font-body);font-variant-numeric:tabular-nums;color:var(--color-neutral-700)">{{ c.newCust }} new · {{ c.existCust }} existing</span>
+            </div>
+            <div style="display:flex;height:18px;width:{{ c.custBar }}">
+              <div style="width:{{ c.newW }};background:var(--color-accent-2-600)"></div>
+              <div style="width:{{ c.existW }};background:var(--color-accent-300)"></div>
+            </div>
+          </div>
+        </sc-for>
+        <div style="margin-top:12px;display:flex;gap:18px;font:400 11.5px/1.4 var(--font-body);color:var(--color-neutral-700)">
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:10px;background:var(--color-accent-2-600);display:inline-block"></span>SBU new customer</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:10px;background:var(--color-accent-300);display:inline-block"></span>SBU existing customer</span>
+        </div>
+      </div>
+      <div>
+        <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr>
+              <th style="padding:8px 10px 8px 0;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Campaign ID</th>
+              <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Total<br>Txns</th>
+              <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">#MAPCLUB<br>Member</th>
+              <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Offline<br>Transaction</th>
+              <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">DF<br>transactions</th>
+              <th style="padding:8px 0 8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">MAPCLUB<br>transaction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <sc-for list="{{ campaigns }}" as="c" hint-placeholder-count="3">
+              <tr>
+                <td style="padding:8px 10px 8px 0;border-bottom:1px solid var(--color-neutral-200);font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ c.n }}</td>
+                <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.txn }}</td>
+                <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.mapclub }}</td>
+                <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.offline }}</td>
+                <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.df }}</td>
+                <td style="padding:8px 0 8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ c.mapTxn }}</td>
+              </tr>
+            </sc-for>
+            <tr>
+              <td style="padding:9px 10px 9px 0;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">Total</td>
+              <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3.563</td>
+              <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">2.407</td>
+              <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.935</td>
+              <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.030</td>
+              <td style="padding:9px 0 9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.664</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: “in <a class="dv-oid" href="#4b">4b</a> put the funnel on a log scale” · “add a week-over-week trend line per campaign” · “narrow <a class="dv-oid" href="#4a">4a</a> to 1440 with a frozen first column”</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const ROWS = [
+  ['Switcher_DF_Jan','1 Jan 2026, 10:00','30 Jan 2026','iPhone 16',865,600000,588000,'48,2%','2,4%','1,9%',420,3320,17.9,7500,'18,2',412,'2,1',268,96,316,229,184,141],
+  ['','','','iPhone 15',1077,640800,620400,'51,4%','3,1%','2,6%',380,1940,11.7,4450,'12,4',359,'3,0',214,84,275,198,146,118],
+  ['','','','iPhone 14',1361,681600,640800,'54,3%','4,2%','3,4%',340,1180,7.6,2590,'7,8',332,'4,1',186,72,260,172,128,104],
+  ['Upgrader_Mapclub_Jan','1 Jan 2026, 10:00','30 Jan 2026','iPhone 16',743,744000,726000,'44,6%','2,1%','1,7%',460,3980,19.2,8840,'21,4',413,'1,8',302,68,345,241,96,217],
+  ['','','','iPhone 15',941,784800,762000,'47,2%','2,8%','2,2%',410,2240,12.5,5110,'14,1',362,'2,6',241,61,301,204,88,174],
+  ['','','','iPhone 14',1108,825600,798000,'51,8%','3,6%','2,9%',360,1360,8.3,3000,'9,2',326,'3,4',208,54,272,178,74,152],
+  ['Payday_Mapclub_Jan','15 Jan 2026, 10:00','30 Jan 2026','iPhone 16',1202,888000,864000,'52,4%','3,4%','2,8%',510,4640,19.3,9820,'19,6',501,'2,4',388,112,389,268,118,296],
+  ['','','','iPhone 15',1367,928800,902400,'55,1%','3,9%','3,2%',450,2680,12.9,5820,'13,2',441,'3,1',316,98,343,231,104,244],
+  ['','','','iPhone 14',1793,969600,941400,'58,3%','4,6%','3,8%',400,1620,8.8,3500,'8,4',417,'4,3',284,86,331,214,92,218]
+];
+const CAMPAIGNS = [
+  ['Switcher_DF_Jan',1103,14540,1140,12.8,6440,8100,668,252,851,599,458,363],
+  ['Upgrader_Mapclub_Jan',1101,16950,1230,13.8,7580,9370,751,183,918,623,258,543],
+  ['Payday_Mapclub_Jan',1359,19140,1360,14.1,8940,10200,988,296,1063,713,314,758]
+];
+const FUNNEL = [
+  ['Sent','7.063.200','100%',100,'var(--color-accent-700)'],
+  ['Delivered','6.843.000','96,9%',96.9,'var(--color-accent-600)'],
+  ['Opened','3.510.000','51,3%',51.3,'var(--color-accent-500)'],
+  ['Clicked','226.000','6,4%',6.4,'var(--color-accent-2-500)'],
+  ['Transacted','3.563','1,6%',1.6,'var(--color-accent-2-700)']
+];
+const FILTERS = [
+  {id:'date',label:'Date',value:'Month · Jan 2026',opts:['Day','Week','Month','Year','Customize']},
+  {id:'cmp',label:'Comparison by period',value:'vs. Dec 2025',opts:['Off','vs. previous period','vs. Dec 2025','vs. same period last year']},
+  {id:'concept',label:'Concept store',value:'All (3)',opts:['All (3)','Digimap','Digiplus','Sharkninja']},
+  {id:'store',label:'Store name',value:'All stores',opts:['All stores','Digimap Grand Indonesia','Digimap PIM 3','Digiplus Central Park']},
+  {id:'brand',label:'Brand',value:'Apple',opts:['Apple','Samsung','Xiaomi']},
+  {id:'mask',label:'Campaign masking',value:'DF, Mapclub',opts:['DF','Mapclub','DF, Mapclub']},
+  {id:'ctype',label:'Campaign type',value:'All (4)',opts:['All (4)','Switcher','Upgrader','Seasonal','LCM']},
+  {id:'cid',label:'Campaign ID',value:'3 selected',opts:['Switcher_DF_Jan','Upgrader_Mapclub_Jan','Payday_Mapclub_Jan']}
+];
+const TABA = [{l:'32px',w:'168px'},{l:'200px',w:'216px'}];
+const TABB = [{l:'32px',w:'186px'},{l:'218px',w:'190px'}];
+const n = v => v.toLocaleString('de-DE');
+const dec = v => v.toFixed(1).replace('.',',');
+
+class Component extends DCLogic {
+  state = { tabA:0, tabB:0, open:null, sel:{} };
+  filters(card){
+    return FILTERS.map(f => {
+      const key = card+'-'+f.id;
+      return {
+        label:f.label,
+        value:this.state.sel[key] || f.value,
+        open:this.state.open === key,
+        onClick:() => this.setState(s => ({open: s.open === key ? null : key})),
+        opts:f.opts.map(o => ({label:o, onClick:() => this.setState({sel:{...this.state.sel,[key]:o}, open:null})}))
+      };
+    });
+  }
+  renderVals(){
+    const rows = ROWS.map(r => {
+      const [campaign,sentDate,endDate,lob,qty,sent,delivered,open,ctr,cr,cost,online,roas,totalRev,aov,txn,attach,mapclub,newCust,existCust,offline,df,mapTxn] = r;
+      return {
+        campaign, sentDate, endDate, lob,
+        topRule: campaign ? '1px solid var(--color-neutral-400)' : '1px solid transparent',
+        zebra: campaign ? '#fff' : 'var(--color-neutral-100)',
+        qty:n(qty), sent:n(sent), delivered:n(delivered), open, ctr, cr,
+        cost:n(cost), online:n(online), roas:dec(roas), roasBar:(roas/20*100).toFixed(1)+'%',
+        totalRev:n(totalRev), aov, txn:n(txn), attach,
+        mapclub:n(mapclub), newCust:n(newCust), existCust:n(existCust),
+        offline:n(offline), df:n(df), mapTxn:n(mapTxn)
+      };
+    });
+    const campaigns = CAMPAIGNS.map(c => {
+      const [nm,txn,rev,cost,roas,onlineRev,offlineRev,mapclub,newCust,existCust,offline,df,mapTxn] = c;
+      return {
+        n:nm, txn:n(txn), rev:n(rev), cost:n(cost), roas:dec(roas),
+        roasBar:(roas/15*100).toFixed(1)+'%',
+        revBar:(rev/19140*100).toFixed(1)+'%',
+        onlineW:(onlineRev/rev*100).toFixed(1)+'%',
+        offlineW:(offlineRev/rev*100).toFixed(1)+'%',
+        custBar:((newCust+existCust)/1359*100).toFixed(1)+'%',
+        newW:(newCust/(newCust+existCust)*100).toFixed(1)+'%',
+        existW:(existCust/(newCust+existCust)*100).toFixed(1)+'%',
+        mapclub:n(mapclub), newCust:n(newCust), existCust:n(existCust),
+        offline:n(offline), df:n(df), mapTxn:n(mapTxn),
+        zebra:'#fff'
+      };
+    }).map((c,i) => ({...c, zebra: i%2 ? 'var(--color-neutral-100)' : '#fff'}));
+    const funnel = FUNNEL.map(([nm,v,step,w,color]) => ({n:nm, v, step, bar:w+'%', color}));
+    return {
+      rows, campaigns, funnel,
+      filtersA: this.filters('a'), filtersB: this.filters('b'),
+      aMain: this.state.tabA === 0, aDetail: this.state.tabA === 1,
+      bMain: this.state.tabB === 0, bDetail: this.state.tabB === 1,
+      aMainClick: () => this.setState({tabA:0}), aDetailClick: () => this.setState({tabA:1}),
+      bMainClick: () => this.setState({tabB:0}), bDetailClick: () => this.setState({tabB:1}),
+      aTabLeft: TABA[this.state.tabA].l, aTabWidth: TABA[this.state.tabA].w,
+      bTabLeft: TABB[this.state.tabB].l, bTabWidth: TABB[this.state.tabB].w
+    };
+  }
+}
+</script>
+</body>
+</html>

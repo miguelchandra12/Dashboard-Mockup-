@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<meta name="design_doc_mode" content="canvas">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0088b0"></rect><g fill="#fff"><rect x="60" y="60" width="80" height="12"></rect><rect x="60" y="84" width="80" height="12"></rect><rect x="60" y="108" width="52" height="12"></rect><rect x="60" y="132" width="66" height="12"></rect></g></svg></template>
+<link rel="stylesheet" href="_ds/broadsheet-419d5cdc-3eb1-4d13-9720-3005c915e02c/styles.css">
+<script src="_ds/broadsheet-419d5cdc-3eb1-4d13-9720-3005c915e02c/_ds_bundle.js"></script>
+<style>
+body{margin:0;background:#e8e6e2;font-family:"Source Serif 4",Georgia,serif}
+a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#201e1d;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 "Source Serif 4",Georgia,serif;color:#201e1d}
+.dv-opts{display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#201e1d;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11.5px/1.3 "Source Serif 4",Georgia,serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.10);overflow:hidden}
+.dv-opt:target .dv-oid{background:#0088b0;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 "Source Serif 4",Georgia,serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Affordability / Promo Effectiveness — Tableau dashboard, 1440 px · <a href="Brand Affinity.dc.html">Brand Affinity</a> · <a href="Membership Penetration.dc.html">Membership Penetration</a> · <a href="EDM Campaign Performance.dc.html">EDM Campaign</a></span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="3a">
+<div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Faithful to the spec sketch — three transaction types, Details on every voucher row</div>
+<div class="dv-card" style="width:1440px">
+
+  <div style="padding:26px 32px 0">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px">
+      <div>
+        
+        <h1 style="display:inline-block;margin:10px 0 6px;padding-bottom:7px;border-bottom:4px solid var(--color-accent-2-600);font:600 44px/1.06 var(--font-heading);letter-spacing:-.015em;color:var(--color-text)">Affordability Promo Effectiveness</h1>
+        
+      </div>
+      <img src="./pasted-1788876927300-0-mtsr4v2y-7y6p.png" alt="MAP TECH — Win more together" width="610" height="92" style="height:38px;width:auto;display:block;flex:none">
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:stretch;gap:14px;padding:20px 32px 18px">
+    <div style="display:flex;align-items:center;gap:7px;flex:none;padding-top:9px">
+      <span style="font:600 9.5px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-700)">Filters</span>
+      <span style="font:400 13px/1 var(--font-body);color:var(--color-accent-600)">▸</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <sc-for list="{{ filtersA }}" as="f" hint-placeholder-count="10">
+        <div style="position:relative">
+          <button onClick="{{ f.onClick }}" style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:112px;padding:8px 11px;background:var(--color-neutral-100);border:1px solid var(--color-neutral-300);border-radius:2px;cursor:pointer;text-align:left;font-family:var(--font-body)" style-hover="background:var(--color-accent-100);border-color:var(--color-accent-400)">
+            <span style="font:600 9px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600)">{{ f.label }}</span>
+            <span style="display:flex;align-items:center;gap:6px;font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ f.value }}<span style="font-size:8px;color:var(--color-neutral-600)">▾</span></span>
+          </button>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;top:calc(100% + 4px);left:0;z-index:20;min-width:190px;padding:5px;background:#fff;border:1px solid var(--color-neutral-400);box-shadow:var(--shadow-lg)">
+              <sc-for list="{{ f.opts }}" as="o" hint-placeholder-count="4">
+                <button onClick="{{ o.onClick }}" style="display:block;width:100%;padding:7px 9px;background:transparent;border:none;cursor:pointer;text-align:left;font:400 12.5px/1.2 var(--font-body);color:var(--color-text)" style-hover="background:var(--color-accent-100)">{{ o.label }}</button>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:0;padding:0 32px;border-bottom:1px solid var(--color-neutral-300)">
+    <button onClick="{{ aMainClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Promo effectiveness</button>
+    <button onClick="{{ aDetailClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Voucher ID used</button>
+  </div>
+  <div style="padding:0 32px;margin-top:-1px;position:relative;height:2px">
+    <div style="position:absolute;left:{{ aTabLeft }};width:{{ aTabWidth }};height:2px;background:var(--color-accent-600)"></div>
+  </div>
+
+  <sc-if value="{{ aMain }}" hint-placeholder-val="{{ true }}">
+  <div style="padding:22px 32px 34px">
+    <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text);margin-bottom:12px">Promo effectiveness by tier and Sub LOB<span style="font:400 12.5px/1.2 var(--font-body);color:var(--color-neutral-600)"> &nbsp;Jan 2026 · 3 campaigns · transactions</span></div>
+    <table style="width:100%;border-collapse:collapse;border:1px solid var(--color-neutral-400)">
+      <thead>
+        <tr>
+          <th style="padding:7px 10px;background:#fff;border-right:1px solid var(--color-neutral-400)"></th>
+          <th colspan="2" style="padding:7px 10px;background:var(--color-neutral-200);border-bottom:1px solid var(--color-neutral-400);border-right:1px solid var(--color-neutral-400);font:600 10.5px/1.3 var(--font-body);color:var(--color-neutral-800)">Top 10 Sub LOBs sold<br><span style="font-weight:400">download SKU performance details</span></th>
+          <th colspan="4" style="padding:7px 10px;background:var(--color-accent-2-100);border-bottom:1px solid var(--color-neutral-400);font:600 11px/1 var(--font-body);letter-spacing:.09em;text-transform:uppercase;color:var(--color-accent-2-800)">Promo effectiveness — type of transaction</th>
+        </tr>
+        <tr>
+          <th style="width:150px;padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);border-right:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Membership Tier</th>
+          <th style="width:150px;padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Top 10 Sub LOB Sold</th>
+          <th style="width:80px;padding:9px 10px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Qty</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Total<br>Transaction</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Trade In</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Transaction With<br>Voucher</th>
+          <th style="padding:9px 10px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Not Using<br>Promotion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="13">
+          <tr style="background:{{ r.zebra }}">
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-right:1px solid var(--color-neutral-400);border-top:{{ r.topRule }};font:600 13px/1.2 var(--font-body);color:var(--color-text)">{{ r.tier }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ r.lob }}</td>
+            <td style="padding:7px 10px;border-right:1px solid var(--color-neutral-400);border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.qty }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.total }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.tradein }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">
+              <div style="display:flex;align-items:center;justify-content:flex-end;gap:8px">
+                <span>{{ r.voucher }}</span>
+                <button onClick="{{ aDetailClick }}" style="padding:3px 8px;background:var(--color-text);border:none;border-radius:2px;cursor:pointer;font:600 10px/1 var(--font-body);color:#fff" style-hover="background:var(--color-accent-700)">Details</button>
+              </div>
+            </td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.none }}</td>
+          </tr>
+        </sc-for>
+        <tr>
+          <td colspan="2" style="padding:9px 10px;border-top:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">Total</td>
+          <td style="padding:9px 10px;border-right:1px solid var(--color-neutral-400);border-top:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">10.457</td>
+          <td style="padding:9px 10px;border-top:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">9.540</td>
+          <td style="padding:9px 10px;border-top:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">4.130</td>
+          <td style="padding:9px 10px;border-top:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3.690</td>
+          <td style="padding:9px 10px;border-top:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.720</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ aDetail }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:22px 32px 34px">
+    <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:12px">
+      <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Detail page — Voucher ID used</div>
+      <button onClick="{{ aMainClick }}" style="padding:3px 9px;background:transparent;border:1px solid var(--color-neutral-400);border-radius:2px;cursor:pointer;font:400 11px/1.3 var(--font-body);color:var(--color-neutral-700)" style-hover="border-color:var(--color-accent-600);color:var(--color-accent-700)">← back to promo effectiveness</button>
+    </div>
+    <table style="width:640px;border-collapse:collapse;border:1px solid var(--color-neutral-400)">
+      <thead>
+        <tr>
+          <th style="padding:9px 12px;border-bottom:1px solid var(--color-neutral-400);border-right:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Voucher ID</th>
+          <th style="padding:9px 12px;border-bottom:1px solid var(--color-neutral-400);border-right:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Voucher Created</th>
+          <th style="padding:9px 12px;border-bottom:1px solid var(--color-neutral-400);border-right:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Voucher Used</th>
+          <th style="padding:9px 12px;border-bottom:1px solid var(--color-neutral-400);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Usage %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ vouchers }}" as="v" hint-placeholder-count="5">
+          <tr style="background:{{ v.zebra }}">
+            <td style="padding:8px 12px;border-bottom:1px solid var(--color-neutral-200);border-right:1px solid var(--color-neutral-400);font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ v.id }}</td>
+            <td style="padding:8px 12px;border-bottom:1px solid var(--color-neutral-200);border-right:1px solid var(--color-neutral-400);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ v.created }}</td>
+            <td style="padding:8px 12px;border-bottom:1px solid var(--color-neutral-200);border-right:1px solid var(--color-neutral-400);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ v.used }}</td>
+            <td style="padding:8px 12px;border-bottom:1px solid var(--color-neutral-200);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ v.pct }}</td>
+          </tr>
+        </sc-for>
+        <tr>
+          <td style="padding:9px 12px;border-top:1px solid var(--color-neutral-400);border-right:1px solid var(--color-neutral-400);font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">Total</td>
+          <td style="padding:9px 12px;border-top:1px solid var(--color-neutral-400);border-right:1px solid var(--color-neutral-400);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">5.720</td>
+          <td style="padding:9px 12px;border-top:1px solid var(--color-neutral-400);border-right:1px solid var(--color-neutral-400);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3.690</td>
+          <td style="padding:9px 12px;border-top:1px solid var(--color-neutral-400);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">64,5%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </sc-if>
+
+</div>
+</div>
+
+<div class="dv-opt" id="3b">
+<div class="dv-olabel"><a class="dv-oid" href="#3b">3b</a>Best practice — type of transaction as a 100% stacked bar with labels, table below</div>
+<div class="dv-card" style="width:1440px">
+
+  <div style="padding:26px 32px 0">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px">
+      <div>
+        
+        <h1 style="display:inline-block;margin:10px 0 6px;padding-bottom:7px;border-bottom:4px solid var(--color-accent-2-600);font:600 44px/1.06 var(--font-heading);letter-spacing:-.015em;color:var(--color-text)">Affordability Promo Effectiveness</h1>
+        
+      </div>
+      <img src="./pasted-1788876927300-0-mtsr4v2y-7y6p.png" alt="MAP TECH — Win more together" width="610" height="92" style="height:38px;width:auto;display:block;flex:none">
+    </div>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:8px;padding:20px 32px 18px">
+    <sc-for list="{{ filtersB }}" as="f" hint-placeholder-count="10">
+      <div style="position:relative">
+        <button onClick="{{ f.onClick }}" style="display:flex;align-items:center;gap:7px;padding:8px 11px;background:#fff;border:1px solid var(--color-neutral-400);border-radius:2px;cursor:pointer;font-family:var(--font-body)" style-hover="border-color:var(--color-accent-600);background:var(--color-accent-100)">
+          <span style="font:400 12px/1 var(--font-body);color:var(--color-neutral-700)">{{ f.label }}</span>
+          <span style="font:600 12.5px/1 var(--font-body);color:var(--color-text)">{{ f.value }}</span>
+          <span style="font-size:8px;color:var(--color-neutral-600)">▾</span>
+        </button>
+        <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:calc(100% + 4px);left:0;z-index:20;min-width:190px;padding:5px;background:#fff;border:1px solid var(--color-neutral-400);box-shadow:var(--shadow-lg)">
+            <sc-for list="{{ f.opts }}" as="o" hint-placeholder-count="4">
+              <button onClick="{{ o.onClick }}" style="display:block;width:100%;padding:7px 9px;background:transparent;border:none;cursor:pointer;text-align:left;font:400 12.5px/1.2 var(--font-body);color:var(--color-text)" style-hover="background:var(--color-accent-100)">{{ o.label }}</button>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display:flex;gap:0;padding:0 32px;border-bottom:1px solid var(--color-neutral-300)">
+    <button onClick="{{ bMainClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Promo effectiveness</button>
+    <button onClick="{{ bDetailClick }}" style="padding:10px 16px;background:transparent;border:none;cursor:pointer;font:600 13px/1 var(--font-body);color:var(--color-neutral-600)" style-hover="color:var(--color-text)">Voucher performance</button>
+  </div>
+  <div style="padding:0 32px;margin-top:-1px;position:relative;height:2px">
+    <div style="position:absolute;left:{{ bTabLeft }};width:{{ bTabWidth }};height:2px;background:var(--color-accent-600)"></div>
+  </div>
+
+  <sc-if value="{{ bMain }}" hint-placeholder-val="{{ true }}">
+  <div style="padding:24px 32px 34px">
+
+    <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px;padding-bottom:26px">
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Transactions</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">9.540</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">+12,4% vs Dec 2025</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Used a promo</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">82,0%</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">1.720 bought at full price</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Trade in</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">4.130</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">43,3% of transactions</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">With voucher</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">3.690</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">38,7% of transactions</div>
+      </div>
+      <div>
+        <div style="font:600 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:var(--color-neutral-600)">Voucher redemption</div>
+        <div style="margin:8px 0 4px;font:600 32px/1 var(--font-heading);font-variant-numeric:tabular-nums;color:var(--color-text)">64,5%</div>
+        <div style="font:400 12px/1.3 var(--font-body);color:var(--color-neutral-700)">3.690 of 5.720 issued</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:52px;padding-bottom:30px">
+      <div>
+        <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Type of transaction, by membership tier</div>
+        <div style="margin:3px 0 18px;font:400 12px/1.3 var(--font-body);color:var(--color-neutral-600)">Share of the tier’s transactions by type — each transaction counted once</div>
+        <sc-for list="{{ tierMix }}" as="t" hint-placeholder-count="5">
+          <div style="padding:7px 0">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px">
+              <span style="font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ t.n }}</span>
+              <span style="font:400 11.5px/1.2 var(--font-body);font-variant-numeric:tabular-nums;color:var(--color-neutral-600)">{{ t.total }} transactions</span>
+            </div>
+            <div style="display:flex;height:24px;width:100%">
+              <div style="width: 235px; background: var(--color-accent-700); display: flex; align-items: center; justify-content: center; font: 600 11px/1 var(--font-body); color: #fff; height: 24px">{{ t.w1 }}</div>
+              <div style="width: 204px; background: var(--color-accent-400); display: flex; align-items: center; justify-content: center; font: 600 11px/1 var(--font-body); color: var(--color-accent-900); height: 24px">{{ t.w2 }}</div>
+              <div style="width: 82px; background: var(--color-neutral-300); display: flex; align-items: center; justify-content: center; font: 600 11px/1 var(--font-body); color: var(--color-neutral-800); height: 24px">{{ t.w3 }}</div>
+            </div>
+          </div>
+        </sc-for>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:16px;font:400 11.5px/1.4 var(--font-body);color:var(--color-neutral-700)">
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:10px;background:var(--color-accent-700);display:inline-block"></span>Trade in</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:10px;background:var(--color-accent-400);display:inline-block"></span>Transaction with voucher</span>
+          <span style="display:flex;align-items:center;gap:6px"><span style="width:14px;height:10px;background:var(--color-neutral-300);display:inline-block"></span>Not using promotion</span>
+        </div>
+      </div>
+      <div>
+        <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Which type of transaction moves the most units</div>
+        <div style="margin:3px 0 18px;font:400 12px/1.3 var(--font-body);color:var(--color-neutral-600)">Transactions across all tiers and Sub LOBs</div>
+        <sc-for list="{{ types }}" as="m" hint-placeholder-count="3">
+          <div style="display:flex;align-items:center;gap:12px;padding:9px 0">
+            <div style="width:140px;flex:none;font:400 12.5px/1.3 var(--font-body);color:var(--color-text)">{{ m.n }}</div>
+            <div style="flex:1;height:20px;background:var(--color-neutral-200)"><div style="height:20px;width:{{ m.bar }};background:{{ m.color }}"></div></div>
+            <div style="width:88px;flex:none;font:400 12px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)"><span style="font-weight:600">{{ m.v }}</span> · {{ m.pct }}</div>
+          </div>
+        </sc-for>
+        <div style="margin-top:14px;font:400 11.5px/1.45 var(--font-body);color:var(--color-neutral-700)">Trade-in takes 40,2% of Program transactions and 50,0% of Elite’s, while full-price buying falls from 21,0% to 14,0% — the higher the tier, the more the trade-in offer does the work.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+      <div style="font:600 15px/1.2 var(--font-heading);color:var(--color-text)">Full detail — tier × Sub LOB</div>
+      <button style="padding:7px 12px;background:#fff;border:1px solid var(--color-accent-600);border-radius:2px;cursor:pointer;font:600 11.5px/1 var(--font-body);color:var(--color-accent-700)" style-hover="background:var(--color-accent-100)">Download SKU performance details</button>
+    </div>
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr>
+          <th style="width:130px;padding:8px 10px 8px 0;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Membership Tier</th>
+          <th style="width:130px;padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Top 10 Sub LOB Sold</th>
+          <th style="width:70px;padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Qty</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Total<br>Transaction</th>
+          <th style="width:290px;padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Type Of Transaction</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Trade In</th>
+          <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Transaction<br>With Voucher</th>
+          <th style="padding:8px 0 8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Not Using<br>Promotion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="13">
+          <tr>
+            <td style="padding:7px 10px 7px 0;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ r.tier }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ r.lob }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.qty }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.total }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }}">
+              <div style="display:flex;height:16px;width:100%">
+                
+                <div style="width: 134px; background: var(--color-accent-700); display: flex; align-items: center; justify-content: center; font: 600 9.5px/1 var(--font-body); color: #fff; height: 16px">{{ r.w1 }}</div><div style="width: 123px; background: var(--color-accent-400); display: flex; align-items: center; justify-content: center; font: 600 9.5px/1 var(--font-body); color: var(--color-accent-900); height: 16px">{{ r.w2 }}</div>
+                <div style="width: 68px; background: var(--color-neutral-300); display: flex; align-items: center; justify-content: center; font: 600 9.5px/1 var(--font-body); color: var(--color-neutral-800); height: 16px">{{ r.w3 }}</div>
+              </div>
+            </td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.tradein }}</td>
+            <td style="padding:7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ r.voucher }}</td>
+            <td style="padding:7px 0 7px 10px;border-bottom:1px solid var(--color-neutral-200);border-top:{{ r.topRule }};font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-neutral-700)">{{ r.none }}</td>
+          </tr>
+        </sc-for>
+        <tr>
+          <td colspan="2" style="padding:9px 10px 9px 0;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">Total</td>
+          <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">10.457</td>
+          <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">9.540</td>
+          <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text)">
+            <div style="display:flex;height:16px;width:100%">
+              <div style="width:43.3%;background:var(--color-accent-700);display:flex;align-items:center;justify-content:center;font:600 9.5px/1 var(--font-body);color:#fff">43,3%</div>
+              <div style="width: 130px; background: var(--color-accent-400); display: flex; align-items: center; justify-content: center; font: 600 9.5px/1 var(--font-body); color: var(--color-accent-900); height: 15px">38,7%</div>
+              <div style="width: 74px; background: var(--color-neutral-300); display: flex; align-items: center; justify-content: center; font: 600 9.5px/1 var(--font-body); color: var(--color-neutral-800); height: 15px">18,0%</div>
+            </div>
+          </td>
+          <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">4.130</td>
+          <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3.690</td>
+          <td style="padding:9px 0 9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">1.720</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ bDetail }}" hint-placeholder-val="{{ false }}">
+  <div style="padding:24px 32px 34px">
+    <div style="font:600 17px/1.2 var(--font-heading);color:var(--color-text)">Voucher performance</div>
+    
+    <div style="display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:52px">
+      <div>
+        <sc-for list="{{ vouchers }}" as="v" hint-placeholder-count="5">
+          <div style="padding:10px 0;border-bottom:1px solid var(--color-neutral-200)">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
+              <span style="font:600 13px/1.2 var(--font-body);color:var(--color-text)">{{ v.id }}</span>
+              <span style="font:400 11.5px/1.2 var(--font-body);font-variant-numeric:tabular-nums;color:var(--color-neutral-700)">{{ v.used }} of {{ v.created }} used · <span style="font-weight:600;color:var(--color-text)">{{ v.pct }}</span></span>
+            </div>
+            <div style="position:relative;height:14px;width:{{ v.createdBar }};background:var(--color-neutral-200)">
+              <div style="height:14px;width:{{ v.usedBar }};background:{{ v.color }}"></div>
+            </div>
+          </div>
+        </sc-for>
+        
+      </div>
+      <div>
+        <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr>
+              <th style="padding:8px 10px 8px 0;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:left;color:var(--color-text)">Voucher ID</th>
+              <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Created</th>
+              <th style="padding:8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Used</th>
+              <th style="padding:8px 0 8px 10px;border-bottom:1.5px solid var(--color-text);font:600 11.5px/1.25 var(--font-body);text-align:right;color:var(--color-text)">Usage %</th>
+            </tr>
+          </thead>
+          <tbody>
+            <sc-for list="{{ vouchers }}" as="v" hint-placeholder-count="5">
+              <tr>
+                <td style="padding:8px 10px 8px 0;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);color:var(--color-text)">{{ v.id }}</td>
+                <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ v.created }}</td>
+                <td style="padding:8px 10px;border-bottom:1px solid var(--color-neutral-200);font:400 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ v.used }}</td>
+                <td style="padding:8px 0 8px 10px;border-bottom:1px solid var(--color-neutral-200);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">{{ v.pct }}</td>
+              </tr>
+            </sc-for>
+            <tr>
+              <td style="padding:9px 10px 9px 0;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);color:var(--color-text)">Total</td>
+              <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">5.720</td>
+              <td style="padding:9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">3.690</td>
+              <td style="padding:9px 0 9px 10px;border-top:1px solid var(--color-neutral-400);border-bottom:1.5px solid var(--color-text);font:600 12.5px/1.2 var(--font-body);text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)">64,5%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: “in <a class="dv-oid" href="#3b">3b</a> split the type chart by campaign instead of tier” · “add revenue per type of transaction” · “make <a class="dv-oid" href="#3a">3a</a> collapse the Sub LOB rows by default”</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const ROWS = [
+  ['Program','iPhone 16',1386,1240,520,480,240],
+  ['','iPhone 15',981,880,350,340,190],
+  ['','iPhone 14',702,640,240,250,150],
+  ['Explorer','iPhone 16',1641,1560,690,620,250],
+  ['','iPhone 15',1038,940,400,370,170],
+  ['','iPhone 14',668,610,250,240,120],
+  ['Enthusiast','iPhone 16',1301,1180,540,450,190],
+  ['','iPhone 15',683,620,270,240,110],
+  ['','iPhone 14',372,340,140,130,70],
+  ['Esteem','iPhone 16',794,720,340,270,110],
+  ['','iPhone 15',341,310,140,120,50],
+  ['Elite','iPhone 16',419,380,190,140,50],
+  ['','iPhone 15',131,120,60,40,20]
+];
+const TIER_MIX = [
+  ['Program',2760,1110,1070,580],
+  ['Explorer',3110,1340,1230,540],
+  ['Enthusiast',2140,950,820,370],
+  ['Esteem',1030,480,390,160],
+  ['Elite',500,250,180,70]
+];
+const TYPES = [
+  ['Trade in',4130,'43,3%','var(--color-accent-700)'],
+  ['Transaction with voucher',3690,'38,7%','var(--color-accent-400)'],
+  ['Not using promotion',1720,'18,0%','var(--color-neutral-400)']
+];
+const VOUCHERS = [
+  ['TradeInVoucher',1560,1241,'79,6%'],
+  ['DIGIANNIV100',740,721,'97,4%'],
+  ['QOALA100',560,515,'92,0%'],
+  ['MAPCLUB50K',1160,756,'65,2%'],
+  ['PAYDAY10',1700,457,'26,9%']
+];
+const FILTERS = [
+  {id:'date',label:'Date',value:'Month · Jan 2026',opts:['Day','Week','Month','Year','Customize']},
+  {id:'cmp',label:'Comparison by period',value:'vs. Dec 2025',opts:['Off','vs. previous period','vs. Dec 2025','vs. same period last year']},
+  {id:'concept',label:'Concept store',value:'All (3)',opts:['All (3)','Digimap','Digiplus','Sharkninja']},
+  {id:'store',label:'Store name',value:'All stores',opts:['All stores','Digimap Grand Indonesia','Digimap PIM 3','Digiplus Central Park']},
+  {id:'brand',label:'Brand',value:'Apple',opts:['Apple','Samsung','Xiaomi']},
+  {id:'mask',label:'Campaign masking',value:'DF, Mapclub',opts:['DF','Mapclub','DF, Mapclub']},
+  {id:'ctype',label:'Campaign type',value:'All (4)',opts:['All (4)','Switcher','Upgrader','Seasonal','LCM']},
+  {id:'cid',label:'Campaign ID',value:'3 selected',opts:['Switcher_DF_Jan','Upgrader_Mapclub_Jan','Payday_Mapclub_Jan']},
+  {id:'channel',label:'Channel',value:'Online, Offline',opts:['Online','Offline','Online, Offline']},
+  {id:'ms',label:'Membership',value:'Member',opts:['Member','Non-member','All']}
+];
+const TABA = [{l:'32px',w:'170px'},{l:'202px',w:'146px'}];
+const TABB = [{l:'32px',w:'170px'},{l:'202px',w:'182px'}];
+const n = v => v.toLocaleString('de-DE');
+const pc = (v,t) => (v/t*100).toFixed(1).replace('.',',')+'%';
+
+class Component extends DCLogic {
+  state = { tabA:0, tabB:0, open:null, sel:{} };
+  filters(card){
+    return FILTERS.map(f => {
+      const key = card+'-'+f.id;
+      return {
+        label:f.label,
+        value:this.state.sel[key] || f.value,
+        open:this.state.open === key,
+        onClick:() => this.setState(s => ({open: s.open === key ? null : key})),
+        opts:f.opts.map(o => ({label:o, onClick:() => this.setState({sel:{...this.state.sel,[key]:o}, open:null})}))
+      };
+    });
+  }
+  renderVals(){
+    const rows = ROWS.map(r => {
+      const [tier,lob,qty,total,ti,vo,np] = r;
+      return {
+        tier, lob, qty:n(qty),
+        topRule: tier ? '1px solid var(--color-neutral-400)' : '1px solid transparent',
+        zebra: tier ? '#fff' : 'var(--color-neutral-100)',
+        total:n(total), tradein:n(ti), voucher:n(vo), none:n(np),
+        w1:pc(ti,total), w2:pc(vo,total), w3:pc(np,total)
+      };
+    });
+    const tierMix = TIER_MIX.map(([nm,total,ti,vo,np]) => ({
+      n:nm, total:n(total), w1:pc(ti,total), w2:pc(vo,total), w3:pc(np,total)
+    }));
+    const types = TYPES.map(([nm,v,p,c]) => ({n:nm, v:n(v), pct:p, color:c, bar:(v/4130*100).toFixed(1)+'%'}));
+    const vouchers = VOUCHERS.map((v,i) => ({
+      id:v[0], created:n(v[1]), used:n(v[2]), pct:v[3],
+      zebra: i%2 ? 'var(--color-neutral-100)' : '#fff',
+      createdBar:(v[1]/1700*100).toFixed(1)+'%',
+      usedBar:(v[2]/v[1]*100).toFixed(1)+'%',
+      color: v[2]/v[1] < 0.5 ? 'var(--color-accent-2-600)' : 'var(--color-accent-600)'
+    }));
+    return {
+      rows, tierMix, types, vouchers,
+      filtersA: this.filters('a'), filtersB: this.filters('b'),
+      aMain: this.state.tabA === 0, aDetail: this.state.tabA === 1,
+      bMain: this.state.tabB === 0, bDetail: this.state.tabB === 1,
+      aMainClick: () => this.setState({tabA:0}), aDetailClick: () => this.setState({tabA:1}),
+      bMainClick: () => this.setState({tabB:0}), bDetailClick: () => this.setState({tabB:1}),
+      aTabLeft: TABA[this.state.tabA].l, aTabWidth: TABA[this.state.tabA].w,
+      bTabLeft: TABB[this.state.tabB].l, bTabWidth: TABB[this.state.tabB].w
+    };
+  }
+}
+</script>
+</body>
+</html>
